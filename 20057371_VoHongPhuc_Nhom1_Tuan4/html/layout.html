@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+
+        body {
+            background-image: url(../img/background.png);
+        }
+
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: aliceblue;
+        }
+
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: aqua;
+            line-height: 50px;
+        }
+
+        header {
+            height: 150px;
+            width: 100%;
+            background-image: url(../img/Header.jfif);
+        }
+
+        .wrapper header .head {
+            color: aquamarine;
+            font-size: 100px;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px burlywood;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .wrapper header:hover p{
+            transform: scale(1.2);
+        }
+
+        .content {
+            width: 100%;
+            height: 360px;
+            background-color: cornsilk;
+        }
+
+        aside {
+            height: 360px;
+            width: 30%;
+            float: left;
+        }
+
+        section {
+            height: 360px;
+            width: 70%;
+            float: left;
+            background-color: yellow;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .menu li {
+            float: left;
+            width: 150px;
+            height: 50px;
+            list-style: none;
+            text-indent: 20px;
+            background-color: azure;
+            position: relative;
+        }
+
+        .menu li .submenu {
+            position: absolute;
+            display: none;
+        }
+
+        a {
+            font-weight: bold;
+            color: slategrey;
+            text-decoration: none;
+        }
+
+        .menu li :hover {
+            background-color: black;
+        }
+
+        li:hover > a {
+            font-style: italic;
+            color: aliceblue;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+            
+        }
+
+        nav span form #txtSubmit {
+            padding: 3px;
+            border-radius: 50%;
+        }
+
+        nav span form #txtEmail {
+            padding: 3px;
+            font-weight: bold;
+        }
+
+        .content aside article img:hover {
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">CAT</a></li>
+                        <li><a href="">DOG</a></li>
+                        <li><a href="">BIRD</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+
+            <span>
+                <form action="" method="post">
+                    <label for="email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhap email">
+                    <input type="submit" value="Go" id="txtSubmit">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <p class="head">GAME SHOW</p>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>Hoat dong 1</h2>
+                    <img src="../img/background.png" alt="" height="80px" width="200px">
+                </article>
+                <article>
+                    <h2>Hoat dong 1</h2>
+                    <img src="../img/background.png" alt="" height="80px" width="200px">
+                </article>
+                <article>
+                    <h2>Hoat dong 1</h2>
+                    <img src="../img/background.png" alt="" height="80px" width="200px">
+                </article>
+            </aside>
+            <section>
+                <p>DANG KI Thong TIn</p>
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>thong tin ca nhan</legend>
+                        <label for="lblHoten">Ho ten:</label>
+                        <input type="text" name="txtHoten" id="txtHoten" placeholder="Nhap ho ten" ><br><br>
+                        <label for="lblCMND">CMND</label>
+                        <input type="number" name="numCMND", id="numCMND" placeholder="Nhap CMND"><br><br>
+                        <label for="lblNgaysinh">Ngay sinh: </label>
+                        <input type="date" name="txtNgaysinh", id="txtNgaysinh" placeholder="Nhap ngay sinh" pattern="dd//MM//yyy"><br><br>
+                        <label for="lblGioi">Gioi tinh</label>
+                        <input type="radio" name="rNam" id="rNam" value="nam"><label for="rNam">nam</label>
+                        <input type="radio" name="rNu" id="rNu" value="nu"><label for="rNu">nu</labu><br><br>
+                            <input type="submit" value="GO">
+                    </fieldset>
+                </form>
+            </section>
+
+        </div>
+        <div class="clear"></div>
+        <footer>Chan trang</footer>
+    </div>
+</body>
+
+</html>
