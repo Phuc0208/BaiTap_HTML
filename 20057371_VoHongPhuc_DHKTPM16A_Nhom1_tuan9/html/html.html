@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/js.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="../Images/logo.PNG" alt="" width="100%">
+            </div>
+            <div class="col-md-10 text-center bg-info">
+                <h3>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h3>
+                <h4 class="text-danger">KHOA CÔNG NGHỆ THÔNG TIN</h4>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-md bg-dark col-md-12 justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">FIT</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Giảng viên</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Sinh viên</a></li>
+                    <li class="nav-item"><a href="" class="nav-link" id="btn2" data-toggle="modal" data-target="#myModal">Đoàn TN</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <aside>
+                    <img src="../Images/ngayhoithanhnien.JPG" class="rounded-circle" width="100%" alt="">
+                </aside>
+            </div>
+            <div class="col-md-8">
+                <section>
+                    <table class="table table-striped" id="danhSach">
+                        <tr>
+                            <th>
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã SV</td>
+                                    <td>Họ tên</td>
+                                    <td>Giới tính</td>
+                                    <td>Năng khiếu</td>
+                                    <td>Email</td>
+                                    <td>Thành phố</td>
+                                </tr>
+                            </th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>987654321</td>
+                                <td>Nguyen Thi Nu</td>
+                                <td>Nữ</td>
+                                <td>Hát</td>
+                                <td>nu@gmail.com</td>
+                                <td>Bến Tre</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <footer class="col-md-12 bg-info text-center">
+                <h4>KHOA CÔNG NGHỆ THÔNG TIN</h4>
+                <h3>LỚP: DHKTPM16A</h3>
+            </footer>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header  justify-content-center">
+                    THÔNG TIN ĐĂNG KÍ
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal">
+                        <div class="form-group" class="ma">
+                            <label for="lblMaSV">Mã sinh viên: </label>
+                            <input type="text" name="txtMaSV" id="txtMaSV" class="form-control">
+                            <span id="tbMa" class="text-danger" style="text-align: center;">*</span>
+                        </div>
+
+                        <div class="form-group" id="ten">
+                            <label for="lblHT">Họ tên: </label>
+                            <input type="text" name="txtHT" id="txtHT" class="form-control">
+                        </div>
+
+                        <div class="form-group" id="email">
+                            <label for="lblEmail">Email: </label>
+                            <input type="text" name="txtEmail" id="txtEmail" class="form-control">
+                            <span id="tbEmail" class="text-danger" style="text-align: center;">*</span>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Năng khiến</p>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="nangKhien" id="chkboi" value="Bơi">Bơi
+                                </label> 
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="nangKhien" id="chkboi" value="Cầu lông">Cầu lông
+                                </label>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="nangKhien" id="chkboi" value="Bóng chuyền">Bóng chuyền
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Thành phố</label>
+                            <select name="city" id="slCity">
+                                <option value="qn">Quảng Ngãi</option>
+                                <option value="ct">Cần Thơ</option>
+                                <option value="tp">TP.HCM</option>
+                                <option value="hn">Hà Nội</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            <p>giới tính: </p>
+                            <input type="radio" id="rad" name="gioiTInh" value="Nam"><label for="Nam">Nam</label><br>
+                            <input type="radio" id="rad" name="gioiTInh" value="Nữ"><label for="Nu">Nữ</label><br>
+                            <input type="radio" id="rad" name="gioiTInh" value="Khác"><label for="Khac">Khác</label><br>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="submit" id="btnSubDK" class="btn btn-warning">Đăng Kí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
